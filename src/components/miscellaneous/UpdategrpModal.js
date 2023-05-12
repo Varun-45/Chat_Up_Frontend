@@ -59,7 +59,7 @@ const UpdategrpModal = ({ fetch, setfetch, fetchmsg }) => {
                 }
 
             };
-            const { data } = await axios.put('/api/chat/removefrmgroup', {
+            const { data } = await axios.put('https://chat-up-api.onrender.com/api/chat/removefrmgroup', {
                 chatId: selectedChat._id,
                 userId: x._id,
 
@@ -111,7 +111,7 @@ const UpdategrpModal = ({ fetch, setfetch, fetchmsg }) => {
                 }
 
             };
-            const { data } = await axios.put('/api/chat/addtogroup', {
+            const { data } = await axios.put('https://chat-up-api.onrender.com/api/chat/addtogroup', {
                 chatId: selectedChat._id,
                 userId: x._id,
 
@@ -142,7 +142,7 @@ const UpdategrpModal = ({ fetch, setfetch, fetchmsg }) => {
                     Authorization: `Bearer ${user.token}`
                 }
             };
-            const { data } = await axios.put('/api/chat/rename', {
+            const { data } = await axios.put('https://chat-up-api.onrender.com/api/chat/rename', {
                 chatId: selectedChat._id,
                 chatName: grpname,
 
@@ -176,7 +176,7 @@ const UpdategrpModal = ({ fetch, setfetch, fetchmsg }) => {
                     Authorization: `Bearer ${user.token}`
                 }
             };
-            const { data } = await axios.get(`/api/user?search=${searchQuery}`, config);
+            const { data } = await axios.get(`https://chat-up-api.onrender.com/api/user?search=${searchQuery}`, config);
             console.log(data)
             setsearchResult(data)
             setloading(false)
@@ -201,7 +201,7 @@ const UpdategrpModal = ({ fetch, setfetch, fetchmsg }) => {
                 }
 
             };
-            const { data } = await axios.put('/api/chat/removefrmgroup', {
+            const { data } = await axios.put('https://chat-up-api.onrender.com/api/chat/removefrmgroup', {
                 chatId: selectedChat._id,
                 userId: user._id,
 

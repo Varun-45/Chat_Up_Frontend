@@ -20,7 +20,7 @@ const MyChats = ({ fetch }) => {
                     Authorization: `Bearer ${user.token}`
                 }
             };
-            const { data } = await axios.get(`/api/chat`, config);
+            const { data } = await axios.get(`https://chat-up-api.onrender.com/api/chat`, config);
             console.log(data)
             setChats(data);
 

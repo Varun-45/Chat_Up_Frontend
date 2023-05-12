@@ -37,7 +37,7 @@ const SideDrawer = () => {
                 Authorization: `Bearer ${user.token}`
             }
         };
-        const { data } = await axios.get(`/api/user?search=${srch}`, config)
+        const { data } = await axios.get(`https://chat-up-api.onrender.com/api/user?search=${srch}`, config)
         setloading(false);
         setasearchres(data);
         // console.log(searchres)
@@ -63,7 +63,7 @@ const SideDrawer = () => {
                     Authorization: `Bearer ${user.token}`
                 }
             };
-            const { data } = await axios.get(`/api/user?search=${srch}`, config)
+            const { data } = await axios.get(`https://chat-up-api.onrender.com/api/user?search=${srch}`, config)
             setloading(false);
             setasearchres(data);
             console.log(searchres)
@@ -91,7 +91,7 @@ const SideDrawer = () => {
                     Authorization: `Bearer ${user.token}`
                 }
             };
-            const { data } = await axios.post("/api/chat", { userId }, config)
+            const { data } = await axios.post("https://chat-up-api.onrender.com/api/chat", { userId }, config)
 
             if (!chats.find((c) => c._id === data._id)) {
                 setChats([data, ...chats])

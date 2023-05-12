@@ -42,7 +42,7 @@ const GroupChats = ({ children }) => {
                     Authorization: `Bearer ${user.token}`
                 }
             };
-            const { data } = await axios.get(`/api/user?search=${searchQuery}`, config);
+            const { data } = await axios.get(`https://chat-up-api.onrender.com/api/user?search=${searchQuery}`, config);
             console.log(data)
             setsearchResult(data)
             setloading(false)
@@ -77,7 +77,7 @@ const GroupChats = ({ children }) => {
                     Authorization: `Bearer ${user.token}`
                 }
             };
-            const { data } = await axios.post(`/api/chat/group`, {
+            const { data } = await axios.post(`https://chat-up-api.onrender.com/api/chat/group`, {
                 name: groupChat,
                 users: JSON.stringify(selecteduser.map((u) => u._id))
             }, config);
