@@ -203,7 +203,7 @@ const HomePage = () => {
                 isClosable: true,
             })
         } catch (error) {
-            console.log(error.response.data)
+            console.log(error)
 
             toast({
                 title: 'Error Occured',
