@@ -188,7 +188,7 @@ const HomePage = () => {
                 },
 
             };
-            const { data } = await axios.post("/api/user/login", { email: lemail, password: lpassword },
+            const { data } = await axios.post("https://chat-up-api.onrender.com/api/user/login", { email: lemail, password: lpassword },
                 config);
 
             localStorage.setItem("userInfo", JSON.stringify(data));
